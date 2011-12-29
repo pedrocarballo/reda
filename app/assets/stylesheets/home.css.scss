@@ -1,0 +1,47 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap"; /* Use this to get all of Bootstrap's @mixins and $variables */
+@import "compass/css3";
+
+body {
+  background: #fff url(small-noise.png) top center;
+}
+
+.jumbotron {
+  min-width: 940px;
+  padding-top: 40px;
+}
+.jumbotron .inner {
+  background: transparent url(hold-fast.gif) top center;
+  padding: 45px 0;
+  @include box-shadow(inset 10px 20px 5px rgba(0,0,0,.3));
+}
+.jumbotron h1, .jumbotron p {
+  margin-bottom: 9px;
+  color: #fff;
+  text-align: center;
+  @include text-shadow(2px 2px 0px #000);
+}
+.jumbotron h1 {
+  font-size: 54px;
+  line-height: 1;
+  img{
+    width: 64px;
+    position: relative;
+    margin-right: 10px;
+    top: 12px;
+  }
+}
+.jumbotron p {
+  font-weight: 300;
+}
+.jumbotron .lead {
+  font-size: 20px;
+  line-height: 27px;
+}
+.jumbotron p a {
+  color: #fff;
+  font-weight: bold;
+}

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Rails Workshops
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    .topbar[data-scrollspy="scrollspy"]
+      .topbar-inner
+        .container
+          a.brand[href="#"] Rails
+          ul.nav
+            li.active
+              a[href="#oque"] O que é?
+            li
+              a[href="#workshops"] Workshops
+            li
+              a[href="#instrutores"] Instrutores
+            li
+              a[href="#onde"] Onde?
+            li
+              a[href="#contato"] Contato
+    header#overview.jumbotron.masthead
+      .inner
+        .container
+          h1
+            = image_tag 'ruby.png'
+            span Rails, estado da arte.
+          p.lead Cursos para quem quer lorem ipsum dolor sit amet.
+    = yield
