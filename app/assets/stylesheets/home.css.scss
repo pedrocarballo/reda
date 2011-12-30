@@ -5,43 +5,227 @@
 @import "bootstrap"; /* Use this to get all of Bootstrap's @mixins and $variables */
 @import "compass/css3";
 
+@font-face{
+  font-family: 'IconicStroke';
+  src: font-url("iconic_stroke.eot");
+  src: local('IconicStroke');
+  src: font-url("iconic_stroke.svg#iconic") format('svg');
+  src: font-url("iconic_stroke.otf") format('opentype');
+}
 body {
-  background: #fff url(small-noise.png) top center;
+  background: #eee url(dirt.png);
 }
 
 .jumbotron {
   min-width: 940px;
   padding-top: 40px;
+  .inner {
+    background: transparent url(hold-fast.gif) top center;
+    padding: 45px 0;
+    @include box-shadow(inset 10px 20px 5px rgba(0,0,0,.3));
+  }
+  p {
+    font-weight: 300;
+    a {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  h1 {
+    font-size: 54px;
+    line-height: 1;
+    img{
+      width: 64px;
+      position: relative;
+      margin-right: 10px;
+      top: 12px;
+    }
+  }
+  .lead {
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
-.jumbotron .inner {
-  background: transparent url(hold-fast.gif) top center;
-  padding: 45px 0;
-  @include box-shadow(inset 10px 20px 5px rgba(0,0,0,.3));
-}
+
 .jumbotron h1, .jumbotron p {
   margin-bottom: 9px;
   color: #fff;
   text-align: center;
   @include text-shadow(2px 2px 0px #000);
 }
-.jumbotron h1 {
-  font-size: 54px;
-  line-height: 1;
-  img{
-    width: 64px;
-    position: relative;
-    margin-right: 10px;
-    top: 12px;
+
+#workshops ul{
+  list-style: none;
+  li.workshop{
+    //height: 40px;
+    @include box-shadow(inset 0 0 5px #999);
+    @include linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.5));
+    @include border-radius(1em);
+
+    padding: 20px 20px 30px 30px;
+    margin-bottom: 20px;
+    h3{
+      @include text-shadow(1px 1px 0 #fff);
+      margin: 0;
+      small{
+        color: #666;
+      }
+    }
+    h3.date{
+      color: #654
+    }
+    h3.price{
+      color: #564
+    }
+    
   }
 }
-.jumbotron p {
-  font-weight: 300;
+
+dl#features{
+  dt{
+    margin-bottom: 10px;
+    color: #090;
+  }
+  dt:before{
+    content: "y";
+    font-family: "IconicStroke";
+    font-size: 18px;
+    margin-right: 5px;
+
+  }
+  dt.not{
+    color: #900;
+  }
+  dt.not:before{
+    content: "x";
+  }
+
+  dd{
+    margin-bottom: 20px;
+  }
 }
-.jumbotron .lead {
-  font-size: 20px;
-  line-height: 27px;
+
+strong.alert-message{
+  padding: 1px 2px;
 }
-.jumbotron p a {
-  color: #fff;
-  font-weight: bold;
+
+#instrutores{
+  img.thumbnail{
+    width: 300px;
+    height: 90px;
+  }
+}
+
+
+#shelf{
+  background: url(/assets/shelves/row_bg.png);
+  padding: 0px;
+  position: relative;
+  height: 175px;
+  #shelf_right{
+    width: 8px;
+    height: 175px;
+    background: url(/assets/shelves/row_right.png);
+    position: absolute;
+    right: 0;
+  }
+  ul#books{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 46%;
+    li{
+      
+      float: left;
+      margin: 16px 10px 14px 10px;
+      vertical-align: bottom;
+      position: relative;
+      a{
+        img, div{
+          @include transition(all 0.1s);
+        }
+        &:hover{
+          img{
+            @include box-shadow(12px -12px 24px #000);
+            left: -1px;
+            top: 2px;
+            position: relative;
+          }
+          .flare{
+            left: -1px;
+            top: -2px;
+            background-position: 0 -304px;
+          }
+          .right{
+            right: -3px;
+            top: -2px;
+          }
+          .bottom{
+            left: -1px;
+            bottom: 1px;
+          }
+          .bottom_right{
+            right: -3px;
+            bottom: 1px;
+          }
+        }
+        .status{
+          position: absolute;
+          color: white;
+          font-size: .7em;
+          text-shadow: #000 1px -1px 1px;
+        }
+        .flare{
+          position: absolute;
+          background-image: url(/assets/shelves/books.png);
+          background-position: 0 0;
+          display: block;
+          left: 0px;
+          top: -4px;
+          z-index: 600;
+          height: 143px;
+          width: 90px;
+        }
+        .right{
+          height: 140px;
+          width: 6px;
+          position: absolute;
+          background-image: url(/assets/shelves/books.png);
+          background-position: -268px 0px;
+          display: block;
+          right: -4px;
+          top: -4px;
+          width: 6px;
+          z-index: 601;
+        }
+        .bottom{
+          width: 89px;
+          position: absolute;
+          background-image: url(/assets/shelves/books.png);
+          background-position: 0px -302px;
+          bottom: 3px;
+          display: block;
+          height: 2px;
+          left: 0px;
+          z-index: 602;
+        }
+        .bottom_right{
+          position: absolute;
+          background-image: url(/assets/shelves/books.png);
+          background-position: -268px -299px;
+          bottom: 3px;
+          display: block;
+          height: 5px;
+          right: -4px;
+          width: 6px;
+          z-index: 604;
+        }
+        img{
+          @include box-shadow(8px -8px 20px #000);
+        }
+      }
+    }
+  }
 }
