@@ -111,8 +111,9 @@ strong.alert-message{
 
 #instrutores{
   img.thumbnail{
-    width: 300px;
-    height: 90px;
+    width: 100px ;//300px;
+    height: 100px;//90px;
+    border: 1px solid #CCC;
   }
 }
 
@@ -228,4 +229,14 @@ strong.alert-message{
       }
     }
   }
+}
+
+#contato{
+  img.thumbnail{
+    width: 194px ;//300px;
+    height: 92px;//90px;
+  }
+  iframe {
+    border: 1px solid #CCC;
+}
 }
