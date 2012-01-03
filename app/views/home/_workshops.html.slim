@@ -42,4 +42,7 @@ section#workshops
                 small = workshop.subtitle
             .span3[style="text-align:right"]
               h3.date = workshop.dates
-              button.btn.info.large Me avise
+              form action=subscribe_path method="post"
+                input name="email"
+                input type="hidden" name="list_id" value=workshop.list_id
+                button.btn.info.large Estou interessado

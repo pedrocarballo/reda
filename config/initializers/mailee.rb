@@ -1,0 +1,1 @@
+Mailee::Config.site = 'http://api.98269d1fb370d.workshops.mailee.me'

@@ -63,6 +63,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailee (0.6.1)
+      actionmailer (~> 3.0)
+      activerecord (~> 3.0)
+      activeresource (~> 3.0)
     mime-types (1.17.2)
     multi_json (1.0.4)
     polyglot (0.3.3)
@@ -127,6 +131,7 @@ DEPENDENCIES
   faker
   jquery-rails
   json
+  mailee
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   slim
