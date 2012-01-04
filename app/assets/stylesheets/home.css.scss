@@ -7,7 +7,7 @@
 
 @font-face{
   font-family: 'IconicStroke';
-  src: font-url("iconic_stroke.eot");
+  src: font-url("iconic_stroke.eot"); 
   src: local('IconicStroke');
   src: font-url("iconic_stroke.svg#iconic") format('svg');
   src: font-url("iconic_stroke.otf") format('opentype');
@@ -82,6 +82,19 @@ body {
   }
 }
 
+#workshops{
+  input {
+    width: 10em;
+  }
+
+  table {
+    margin-top: 100px;
+    td {
+      border: 0
+    }
+  }
+}
+
 dl#features{
   dt{
     margin-bottom: 10px;
@@ -112,8 +125,9 @@ strong.alert-message{
 
 #instrutores{
   img.thumbnail{
-    width: 300px;
-    height: 90px;
+    width: 100px ;//300px;
+    height: 100px;//90px;
+    border: 1px solid #CCC;
   }
 }
 
@@ -229,4 +243,14 @@ strong.alert-message{
       }
     }
   }
+}
+
+#contato{
+  img.thumbnail{
+    width: 194px ;//300px;
+    height: 92px;//90px;
+  }
+  iframe {
+    border: 1px solid #CCC;
+}
 }

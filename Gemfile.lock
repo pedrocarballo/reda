@@ -50,6 +50,8 @@ GEM
     erubis (2.7.0)
     execjs (1.2.13)
       multi_json (~> 1.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     fssm (0.2.7)
     hike (1.2.1)
     i18n (0.6.0)
@@ -61,6 +63,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailee (0.6.1)
+      actionmailer (~> 3.0)
+      activerecord (~> 3.0)
+      activeresource (~> 3.0)
     mime-types (1.17.2)
     multi_json (1.0.4)
     polyglot (0.3.3)
@@ -122,8 +128,10 @@ DEPENDENCIES
   bootstrap-sass (~> 1.4.3)
   coffee-rails (~> 3.1.0)
   compass (~> 0.12.alpha.2)
+  faker
   jquery-rails
   json
+  mailee
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   slim

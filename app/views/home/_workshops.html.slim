@@ -5,7 +5,7 @@ section#workshops
     h1 Workshops
   .row
     ul
-      - for workshop in @workshops
+      - for workshop in @open_workshops
         li.workshop
           .row
             .span12
@@ -14,9 +14,35 @@ section#workshops
                 = workshop.title
                 |  
                 small = workshop.subtitle
-
-              p = workshop.info
+              br
+              dl
+                dt = Faker::Lorem.sentence
+                dd = Faker::Lorem.paragraph
+              dl
+                dt = Faker::Lorem.sentence
+                dd = Faker::Lorem.paragraph
+              dl
+                dt = Faker::Lorem.sentence
+                dd = Faker::Lorem.paragraph
             .span3[style="text-align:right"]
               h3.date = workshop.dates
               h3.price R$ 250,00
-              button.btn.success.large Inscrever
+              = render :partial => 'paypal_form', locals: {workshop: workshop}
+
+  .row
+    ul
+      - for workshop in @next_workshops
+        li.workshop
+          .row
+            .span12
+              span.label[class=workshop.status.first] = workshop.status.last
+              h3
+                = workshop.title
+                |  
+                small = workshop.subtitle
+            .span3[style="text-align:right"]
+              h3.date = workshop.dates
+              form action=subscribe_path method="post"
+                input name="email" 
+                input type="hidden" name="list_id" value=workshop.list_id
+                button.btn.info.large Estou interessado
