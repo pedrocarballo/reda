@@ -27,7 +27,7 @@ section#workshops
             .span3[style="text-align:right"]
               h3.date = workshop.dates
               h3.price R$ 250,00
-              button.btn.success.large Inscrever
+              = render :partial => 'paypal_form', locals: {workshop: workshop}
 
   .row
     ul
@@ -43,6 +43,6 @@ section#workshops
             .span3[style="text-align:right"]
               h3.date = workshop.dates
               form action=subscribe_path method="post"
-                input name="email"
+                input name="email" 
                 input type="hidden" name="list_id" value=workshop.list_id
                 button.btn.info.large Estou interessado

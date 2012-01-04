@@ -81,6 +81,19 @@ body {
   }
 }
 
+#workshops{
+  input {
+    width: 10em;
+  }
+
+  table {
+    margin-top: 100px;
+    td {
+      border: 0
+    }
+  }
+}
+
 dl#features{
   dt{
     margin-bottom: 10px;
