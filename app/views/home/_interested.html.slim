@@ -1,0 +1,32 @@
+section#interested.modal.fade
+  form action=subscribe_path method="post"
+    .modal-header
+      a.close[href="#"] x
+      h1 Quais workshops te interessam?
+    
+    .modal-body
+        label[for="name"] Nome
+        .input
+          input.xlarge[name="name"]
+        .clearfix
+        label[for="email"] Email
+        .input
+          input.xlarge[name="email"]
+        .clearfix
+
+        ul.inputs-list
+          - for workshop in @next_workshops
+            li
+              label
+                  .input
+                    input type="checkbox" name="workshops[]" value=workshop.list_id
+                    span
+                      b = workshop.title
+                      |  
+                      small = workshop.subtitle
+                      |  
+                      small = workshop.dates
+
+    .modal-footer
+      input.btn.primary[type="submit" value="Quero receber mais informações"]
+      input.btn.secondary[type="reset" value="Não estou interessado"]

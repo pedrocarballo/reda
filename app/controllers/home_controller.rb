@@ -25,10 +25,12 @@ class HomeController < ApplicationController
 
   def list_subscribe
     return redirect_to root_path unless request.post?
+    raise params.inspect
     begin
       contact = Mailee::Contact.create(:email => params[:email])
-      list = Mailee::List.find(params[:list_id])
-      contact.put(:subscribe, :list_id => params[:list_id])
+      for list in params[:workshops] do
+        contact.put(:subscribe, :list_id => list)
+      end
       redirect_to(root_path, :notice => 'Pronto, agora você receberá notícias sobre o curso')
     rescue
       redirect_to(root_path, :error => 'Não foi possível cadastrar você para receber notificações')
