@@ -1,0 +1,29 @@
+section#payment.modal.fade
+  form action=subscribe_path method="post"
+    .modal-header
+      a.close[href="#"] x
+      h1 Faça sua inscrição
+    
+    .modal-body
+      table.zebra-striped
+        tbody
+          - for workshop in @open_workshops
+            tr
+              td
+                input[type="checkbox" name="workshops[]" value=workshop.list_id]
+              td
+                b = workshop.title
+                |   
+                small = workshop.subtitle
+              td
+                | R$ 250
+
+
+    .modal-footer
+      .row
+        .span-half
+          h3 
+            | total
+        .span-half
+          h2[text-align="right"] R$ 100,00
+        input.btn.primary[type="submit" value="Efetuar pagamento"]
