@@ -46,7 +46,7 @@ javascript:
     form = $(this);
     selecteds = form.find('input[type="checkbox"]:checked');
     quant = 0;
-    selecteds.each(function(s){ 
+    selecteds.each(function(){ 
         quant +=1;
         selected = $(this);
         number = $('<input>').attr({type:"hidden", name:"item_number_"+quant, value: selected.data("workshop_id")});
@@ -64,3 +64,12 @@ javascript:
       });
     return true;
     })
+  $('#payment form input[type="checkbox"]').change(function() {
+      quant = $("#payment form input[type='checkbox']:checked").length;
+      if(quant>4){
+        $('#final_price').html((quant*250)-250);
+        }
+      else {
+        $('#final_price').html(quant*250);
+        }
+    });
