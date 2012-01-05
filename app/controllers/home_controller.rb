@@ -1,7 +1,11 @@
 # encoding: utf-8
+<<<<<<< HEAD
+require 'ostruct'
+=======
 
 require'ostruct'
 
+>>>>>>> b53d8a2462f36b17d08c55f6716ae4475d50235a
 class HomeController < ApplicationController
   def index
     @open_workshops = [
