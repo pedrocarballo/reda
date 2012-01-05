@@ -248,9 +248,17 @@ strong.alert-message{
 }
 }
 
-
 #payment {
-  padding: 0 20px
+  label {
+    float: none;
+    text-align: none;
+    width: none;
+    padding-top: none;
+    line-height: none;
+  }
+  input {
+    outline: none;
+  }
 
 }
 

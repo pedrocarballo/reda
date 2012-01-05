@@ -1,23 +1,34 @@
 section#payment.modal.fade
-  form action=subscribe_path method="post"
+  form action="https://www.paypal.com/cgi-bin/webscr" method="post"
+    input type="hidden" name="cmd" value="_cart"
+    input type="hidden" name="upload" value="1"
+    input type="hidden" name="business" value="workshops@engage.is" 
+    input type="hidden" name="currency_code" id="currency_code" value="BRL" 
+    input type="hidden" name="return" value="http://www.mysite.org/thank_you_kindly.html" 
+
     .modal-header
       a.close[href="#"] x
       h1 Faça sua inscrição
     
     .modal-body
+      .alert-message.success
+        p
+        |  <strong>Atenção!</strong> Comprando quatro workshops o quinto é de graça
       table.zebra-striped
         tbody
           - for workshop in @open_workshops
             tr
               td
-                input[type="checkbox" name="workshops[]" value=workshop.list_id]
+                input.workshop[type="checkbox" name="workshops[]" value=workshop.id id="workshop_#{workshop.id}" data-workshop_name="#{workshop.title} #{workshop.subtitle}" data-workshop_price=250 data-workshop_id=workshop.id]
               td
-                b = workshop.title
-                |   
-                small = workshop.subtitle
+                label for="workshop_#{workshop.id}"
+                  b = workshop.title
+                  |   
+                  small = workshop.subtitle
               td
-                | R$ 250
-
+                label for="workshop_#{workshop.id}"
+                  | R$ 250
+      
 
     .modal-footer
       .row
@@ -25,5 +36,31 @@ section#payment.modal.fade
           h3 
             | total
         .span-half
-          h2[text-align="right"] R$ 100,00
-        input.btn.primary[type="submit" value="Efetuar pagamento"]
+          h2[text-align="right"] 
+            | R$ 
+            span#final_price 0
+        input.btn.primary type="submit" value="Efetuar pagamento"
+
+javascript:
+  $('#payment form').submit(function() {
+    form = $(this);
+    selecteds = form.find('input[type="checkbox"]:checked');
+    quant = 0;
+    selecteds.each(function(s){ 
+        quant +=1;
+        selected = $(this);
+        number = $('<input>').attr({type:"hidden", name:"item_number_"+quant, value: selected.data("workshop_id")});
+        form.append(number);
+        name = $('<input>').attr({type:"hidden", name:"item_name_"+quant, value: selected.data("workshop_name")});
+        form.append(name);
+        amount = $('<input>').attr({type:"hidden", name:"amount_"+quant, value: selected.data("workshop_price")});
+        form.append(amount);
+        quantity = $('<input>').attr({type:"hidden", name:"quantity_"+quant, value: 1});
+        form.append(quantity);
+        if(quant>4){
+          discount = $('<input>').attr({type:"hidden",name:"discount_amount_cart",value:250});
+          form.append(discount);
+          }
+      });
+    return true;
+    })

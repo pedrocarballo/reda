@@ -11,6 +11,17 @@ section#oque
       p O valor de cada workshop é de <strong class="alert-message">R$ 250,00</strong>, com um desconto especial para quem adquirir um pacote de 5.
       p TODO: Colocar um campo de email do Mailee aqui.
       p Veja ao lado nossas "features"!
+
+      br
+
+      form action=subscribe_path method="post"
+        h2 Newsletter
+        p Cadastre-se para receber informações sobre os próximos cursos
+        input type="text" name="email"
+        input type="hidden" name="workshops[]" value="218857"
+        |  
+        input.btn.primary type="submit" value="Cadastrar"
+
     .span1
       | &nbsp;
     .span8
@@ -29,3 +40,4 @@ section#oque
         dd Certamente você terá colegas de primeira categoria, conhecendo empresas novas e, quem sabe, até aquela vaga que você está procurando.
         dt.not Certificação Developer Senior Mega Master Experienced
         dd Não, não temos nada disso!
+
