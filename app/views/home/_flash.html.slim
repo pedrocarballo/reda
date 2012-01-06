@@ -1,0 +1,9 @@
+- if notice
+  br
+    .alert-message.success
+      p =h notice.html_safe
+
+- if alert
+  br
+    .alert-message.error
+      p =h alert.html_safe

@@ -14,10 +14,18 @@ class HomeController < ApplicationController
       for list in params[:workshops] do
         contact.put(:subscribe, :list_id => list)
       end
-      redirect_to(root_path, :notice => 'Pronto, agora você receberá notícias sobre o curso')
+      redirect_to(root_path, :notice => '<strong>Pronto!</strong> Assim que tivermos novidades sobre os cursos ficará sabendo por email.')
     rescue
-      redirect_to(root_path, :error => 'Não foi possível cadastrar você para receber notificações')
+      redirect_to(root_path, alert: '<strong>Droga.</strong> Não foi cadastrar você na newsletter. Por favor entre em contato conosco pelo workshops@engage.is.')
     end
+  end
+
+  def success
+    redirect_to(root_path, notice: '<strong>Feito!</strong> Você está inscrito nos workshops. Assim que a data estiver próxima você receberá um email com mais informações.')
+  end
+
+  def error
+    redirect_to(root_path, alert: '<strong>Droga.</strong> Não foi possível realizar sua inscrição. Por favor entre em contato conosco pelo workshops@engage.is.')
   end
 
 end

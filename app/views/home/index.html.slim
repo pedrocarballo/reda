@@ -1,29 +1,30 @@
 .container
+  = render 'flash'
   = render 'oque'
   = render 'workshops'
   = render 'instrutores'
   = render 'onde'
   = render 'contato'
-br
-br
-br
-br
-section
-  #shelf
-    #shelf_right
-    ul#books
-      li
-        = link_to '#' do
-          span.flare
-          span.right
-          span.bottom
-          span.bottom_right
-          = image_tag 'book.png'
-javascript:
-  $('#books li img').load(function(){
-    var w = $(this).width()
-    $(this).siblings('.flare, .bottom').css('width', w)
-  })
+/*br*/
+/*br*/
+/*br*/
+/*br*/
+/*section*/
+  /*#shelf*/
+    /*#shelf_right*/
+    /*ul#books*/
+      /*li*/
+        /*= link_to '#' do*/
+          /*span.flare*/
+          /*span.right*/
+          /*span.bottom*/
+          /*span.bottom_right*/
+          /*= image_tag 'book.png'*/
+/*javascript:*/
+  /*$('#books li img').load(function(){*/
+    /*var w = $(this).width()*/
+    /*$(this).siblings('.flare, .bottom').css('width', w)*/
+  /*})*/
 
 = render 'interested'
 = render 'payment'
