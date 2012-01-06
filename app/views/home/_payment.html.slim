@@ -19,14 +19,14 @@ section#payment.modal.fade
           - for workshop in @open_workshops
             tr
               td
-                input.workshop[type="checkbox" name="workshops[]" value=workshop.id id="workshop_#{workshop.id}" data-workshop_name="#{workshop.title} #{workshop.subtitle}" data-workshop_price=250 data-workshop_id=workshop.id]
+                input.workshop[type="checkbox" name="workshops[]" value=workshop["id"] id="workshop_#{workshop['id']}" data-workshop_name="#{workshop['title']} #{workshop['subtitle']}" data-workshop_price=250 data-workshop_id=workshop['id']]
               td
-                label for="workshop_#{workshop.id}"
-                  b = workshop.title
+                label for="workshop_#{workshop['id']}"
+                  b = workshop["title"]
                   |   
-                  small = workshop.subtitle
+                  small = workshop["subtitle"]
               td
-                label for="workshop_#{workshop.id}"
+                label for="workshop_#{workshop['id']}"
                   | R$ 250
       
 

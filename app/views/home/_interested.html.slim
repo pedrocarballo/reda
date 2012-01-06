@@ -15,17 +15,17 @@ section#interested.modal.fade
         .clearfix
 
         ul.inputs-list
-          - for workshop in @next_workshops
+          - for workshop in @open_workshops
             li
               label
                   .input
-                    input type="checkbox" name="workshops[]" value=workshop.list_id
+                    input type="checkbox" name="workshops[]" value=workshop["list_id"]
                     span
-                      b = workshop.title
+                      b = workshop["title"]
                       |  
-                      small = workshop.subtitle
+                      small = workshop["subtitle"]
                       |  
-                      small = workshop.dates
+                      small = workshop["dates"]
 
     .modal-footer
       input.btn.primary[type="submit" value="Quero receber mais informações"]

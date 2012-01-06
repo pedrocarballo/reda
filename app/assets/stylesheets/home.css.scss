@@ -55,6 +55,10 @@ body {
   @include text-shadow(2px 2px 0px #000);
 }
 
+#workshops ul.info {
+  list-style: disc outside none;
+}
+
 #workshops ul{
   list-style: none;
   li.workshop{
