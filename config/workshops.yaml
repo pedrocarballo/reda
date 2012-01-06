@@ -75,7 +75,8 @@ open_workshops:
   - id: 5
     title: Rspec2
     subtitle: Testando aplicações Rails
-    info: ""
+    info:
+      - Aguarde mais informações
     dates: 5, 7 e 9/3
     status: [success, "Inscrições abertas"]
     list_id: 218869 
@@ -83,7 +84,8 @@ open_workshops:
   - id: 6
     title: BackboneJS & Jasmine
     subtitle: JS de verdade para suas aplicações
-    info: ""
+    info:
+      - Aguarde mais informações
     dates: 12, 14 e 16/3
     status: [success, "Inscrições abertas"]
     list_id: 218870
@@ -93,8 +95,12 @@ open_workshops:
     subtitle: Metaprogramação
     info: 
       - Entendendo DSLs (Domain specific languages);
-      - method_missing;
       - Criando métodos dinamicamente;
+      - Redefinindo e removendo métodos;
+      - method_missing;
+      - eval, class_eval e instance_eval;
+      - Blocos e escopos;
+      - Gems para metaprogramação;
     dates: 19, 21 e 23/3
     status: [success, "Inscrições abertas"]
     list_id: 218871 
@@ -102,7 +108,8 @@ open_workshops:
   - id: 8
     title: Rails3.1
     subtitle: Deployment, escalabilidade & cloud computing
-    info: ""
+    info:
+      - Aguarde mais informações
     dates: 26, 28 e 30/3
     status: [success, "Inscrições abertas"]
     list_id: 218872
