@@ -18,3 +18,4 @@ end
 gem 'jquery-rails'
 gem 'slim'
 gem 'bootstrap-sass', '~> 1.4.3'
+gem 'thin'
