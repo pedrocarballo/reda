@@ -49,22 +49,18 @@ javascript:
     selecteds.each(function(){ 
         quant +=1;
         selected = $(this);
-        number = $('<input>').attr({type:"hidden", name:"item_number_"+quant, value: selected.data("workshop_id")});
-        form.append(number);
-        name = $('<input>').attr({type:"hidden", name:"item_name_"+quant, value: selected.data("workshop_name")});
-        form.append(name);
-        amount = $('<input>').attr({type:"hidden", name:"amount_"+quant, value: selected.data("workshop_price")});
-        form.append(amount);
-        quantity = $('<input>').attr({type:"hidden", name:"quantity_"+quant, value: 1});
-        form.append(quantity);
+        form.append($('<input/>').attr({type:"hidden", name:"item_number_"+quant, value: selected.data("workshop_id")}));
+        form.append($('<input />').attr({type:"hidden", name:"item_name_"+quant, value: selected.data("workshop_name")}));
+        form.append($('<input />').attr({type:"hidden", name:"amount_"+quant, value: selected.data("workshop_price")}));
+        form.append($('<input />').attr({type:"hidden", name:"quantity_"+quant, value: 1}));
         if(quant>4){
-          discount = $('<input>').attr({type:"hidden",name:"discount_amount_cart",value:250});
-          form.append(discount);
+          form.append($('<input />').attr({type:"hidden",name:"discount_amount_cart",value:250}));
           }
       });
     return true;
     })
-  $('#payment form input[type="checkbox"]').change(function() {
+
+  calculate_total = function() {
       quant = $("#payment form input[type='checkbox']:checked").length;
       if(quant>4){
         $('#final_price').html((quant*250)-250);
@@ -72,4 +68,6 @@ javascript:
       else {
         $('#final_price').html(quant*250);
         }
-    });
+    }
+    $('#payment form input[type="checkbox"]').change(calculate_total);
+    $(calculate_total);
