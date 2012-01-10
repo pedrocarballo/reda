@@ -81,14 +81,6 @@ open_workshops:
     status: [success, "Inscrições abertas"]
     list_id: 218869 
   
-  - id: 6
-    title: BackboneJS & Jasmine
-    subtitle: JS de verdade para suas aplicações
-    info:
-      - Aguarde mais informações
-    dates: 12, 14 e 16/3
-    status: [success, "Inscrições abertas"]
-    list_id: 218870
   
   - id: 7
     title: Ruby1.9
@@ -101,46 +93,87 @@ open_workshops:
       - eval, class_eval e instance_eval;
       - Blocos e escopos;
       - Gems para metaprogramação;
-    dates: 19, 21 e 23/3
+    dates: 12, 14 e 16/3
     status: [success, "Inscrições abertas"]
     list_id: 218871 
   
   - id: 8
     title: Rails3.1
-    subtitle: Deployment, escalabilidade & cloud computing
+    subtitle: Deployment, infraestrutura & escalabilidade 
     info:
-      - Aguarde mais informações
-    dates: 26, 28 e 30/3
+      - "<strong>Deployment</strong>"
+      - Continuous integration;
+      - Continuous deployment;
+      - Development, staging e production environments;
+      - Web servers (apache e nginx);
+      - Ruby application servers (unicorn, thin, mongrel, passenger..);
+      - "<strong>Infraestrutura</strong>"
+      - Máquinas virtuais e servidores dedicados;
+      - Hospedagem de assets;
+      - Envio de emails;
+      - Balanceamento de carga;
+      - Autoscaling;
+      - "<strong>Escalabilidade</strong>"
+      - Identificando gargalos
+      - Background jobs (rescue e delayed job) e queues;
+      - Cache da aplicação (rails cache, memoise);
+      - Ferramentas de cache (memcache, redis) 
+      - Otimização de banco de dados;
+    dates: 19, 21 e 23/3
     status: [success, "Inscrições abertas"]
     list_id: 218872
+
+  - id: 9
+    title: Aprendendo a programar
+    subtitle: Parte 1
+    info:
+      - É designer e quer aprender programação? É MBA e quer saber do que seus programadores estão falando? A cadeira de lógica tá dificil? Quer acelerar seu aprendizado?
+      - Neste workshop você <i>não irá aprender</i> lógica de programação. Você aprenderá <i>na prática</i> e de forma <i>divertida</i> como programar.
+      - Usaremos jogos online e ferramentas inovadoras para quem está começando, ensinando como base a linguagem Ruby (viu, nada de Pascal*).
+      - "* Mas não se preocupe, isso irá lhe ajudar com o Pascal."
+    dates: 26, 28 e 30/3
+    status: [success, "Inscrições abertas"]
+    list_id: 225202
   
+  - id: 10
+    title: Aprendendo a programar
+    subtitle: Parte 2
+    info:
+      - É designer e quer aprender programação? É MBA e quer saber do que seus programadores estão falando? A cadeira de lógica tá dificil? Quer acelerar seu aprendizado?
+      - Neste workshop você <i>não irá aprender</i> lógica de programação. Você aprenderá <i>na prática</i> e de forma <i>divertida</i> como programar.
+      - Usaremos jogos online e ferramentas inovadoras para quem está começando, ensinando como base a linguagem Ruby (viu, nada de Pascal*).
+      - "* Mas não se preocupe, isso irá lhe ajudar com o Pascal."
+    dates: 2, 4 e 6/4
+    status: [success, "Inscrições abertas"]
+    list_id: 225204
+
 coming_workshops:
   - title: Rails3.1
     subtitle: Integração com redes sociais
-    dates: 2, 4 e 6/4
     status: [notice, "Aguarde"]
     list_id: 221033
 
+    title: BackboneJS & Jasmine
+    subtitle: JS de verdade para suas aplicações
+    status: [notice, "Aguarde"]
+    list_id: 218870
+  
   - title: NodeJS1.6
     subtitle: WebSockets com Express Básico
-    dates: 2, 4 e 6/4
     status: [notice, "Aguarde"]
     list_id: 218859
 
   - title: NodeJS1.6
     subtitle: WebSockets com Express Avançado
-    dates: 2, 4 e 6/4
     status: [notice, "Aguarde"]
     list_id: 218860
   
   - title: JaxGL
     subtitle: WebGL para programadores Rails
-    dates: 9, 11 e 13/4
     status: [notice, "Aguarde"]
     list_id: 218861
 
   - title: Vim
     subtitle: Subtitle here!
-    dates: 16, 18 e 20/4
     status: [notice, "Aguarde"]
     list_id: 218862

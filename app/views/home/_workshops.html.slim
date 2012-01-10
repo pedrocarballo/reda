@@ -18,7 +18,7 @@ section#workshops
                 - unless workshop["info"].empty?
                   - for line in workshop["info"]
                     li
-                      = line
+                      = line.html_safe
             .span3[style="text-align:right"]
               h3.date = workshop["dates"]
               h3.price R$ 250,00
