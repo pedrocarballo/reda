@@ -153,7 +153,7 @@ coming_workshops:
     status: [notice, "Aguarde"]
     list_id: 221033
 
-    title: BackboneJS & Jasmine
+  - title: BackboneJS & Jasmine
     subtitle: JS de verdade para suas aplicações
     status: [notice, "Aguarde"]
     list_id: 218870
