@@ -26,7 +26,7 @@ open_workshops:
       - Operadores como métodos;
       - Métodos que executam blocos;
     dates: 6, 8 e 10/2
-    status: [success, "Inscrições abertas"]
+    status: ['', "Vagas preenchidas"]
     list_id: 218865
   
   - id: 3

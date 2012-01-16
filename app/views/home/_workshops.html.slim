@@ -8,7 +8,7 @@ section#workshops
       - for workshop in @open_workshops
         li.workshop
           .row
-            .span12
+            .span11
               span.label[class=workshop["status"].first] = workshop["status"].last
               h3
                 = workshop["title"]
@@ -19,8 +19,10 @@ section#workshops
                   - for line in workshop["info"]
                     li
                       = line.html_safe
-            .span3[style="text-align:right"]
-              h3.date = workshop["dates"]
+            .span4[style="text-align:right"]
+              h3.date
+                = workshop["dates"]
+                |  - 19h30
               h3.price R$ 250,00
               - if workshop["status"].first.empty?
                 button.btn.disabled.large Vagas preenchidas
