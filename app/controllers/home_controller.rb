@@ -2,7 +2,8 @@
 
 class HomeController < ApplicationController
   def index
-    @open_workshops = OPEN_WORKSHOPS
+    @workshops = OPEN_WORKSHOPS
+    @open_workshops = OPEN_WORKSHOPS.find_all{|w| w["status"][0] == "success"}
     @coming_workshops = COMING_WORKSHOPS
   end
 
