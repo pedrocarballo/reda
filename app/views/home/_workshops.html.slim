@@ -22,7 +22,10 @@ section#workshops
             .span3[style="text-align:right"]
               h3.date = workshop["dates"]
               h3.price R$ 250,00
-              button.btn.success.large[data-controls-modal="payment" data-keyboard="true" data-backdrop="true"] Inscrever
+              - if workshop["status"].first.empty?
+                button.btn.disabled.large Vagas preenchidas
+              - else
+                button.btn.large.success[data-controls-modal="payment" data-keyboard="true" data-backdrop="true"] Inscrever
   .row
     ul
       - for workshop in @coming_workshops

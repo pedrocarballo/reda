@@ -51,7 +51,7 @@ open_workshops:
       - "Testando modelos e controles com Test::Unit;"
       - "Filtros nos controler: before, after e around."
     dates: 13, 15 e 16/2
-    status: [success, "Inscrições abertas"]
+    status: ['', "Vagas preenchidas"]
     list_id: 218867
   
   - id: 4
