@@ -11,7 +11,7 @@ open_workshops:
       - Algum diferenças do Ruby 1.9 para o Ruby 1.8.7;
       - Usando blocos each, map/collect, select...;
     dates: 30/1, 1/2 e 3/2
-    status: [success, "Inscrições abertas"]
+    status: ['', "Vagas preenchidas"]
     list_id: 218864
     
   - id: 2
@@ -69,7 +69,7 @@ open_workshops:
       - Testando com Test::Unit;
       - Colocando aplicações no ar com Heroku;
     dates: 27/2, 29/2 e 2/3
-    status: [success, "Inscrições abertas"]
+    status: ['', "Vagas preenchidas"]
     list_id: 218868
 
   - id: 5
